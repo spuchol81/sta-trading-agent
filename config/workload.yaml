@@ -11,8 +11,7 @@ spec:
     git:
       url: https://github.com/spuchol81/sta-trading-agent.git
       ref:
-        branch: main
-    subPath: spring-boot-trading-agent 
+        branch: main 
   build:
     env:
     - name: BP_JVM_VERSION
