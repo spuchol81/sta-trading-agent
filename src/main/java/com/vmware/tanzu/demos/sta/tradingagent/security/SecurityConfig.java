@@ -73,7 +73,7 @@ class SecurityConfig {
             OAuth2AuthorizedClientManager oauth2ClientManager) {
         return request -> {
             final var authorizeRequest = OAuth2AuthorizeRequest
-                    .withClientRegistrationId("appsso")
+                    .withClientRegistrationId("sso")
                     .principal(appName)
                     .build();
             final var authorizedClient = oauth2ClientManager
