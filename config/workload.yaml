@@ -2,6 +2,8 @@ apiVersion: carto.run/v1alpha1
 kind: Workload
 metadata:
   name: sta-trading-agent
+  annotations:
+    autoscaling.knative.dev/min-scale: "1"
   labels:
     apps.tanzu.vmware.com/workload-type: web
     apps.tanzu.vmware.com/has-tests: "true"
@@ -36,6 +38,11 @@ spec:
       name: sta-trading-agent-config
   - name: sso
     ref:
-      apiVersion: services.apps.tanzu.vmware.com/v1alpha1
-      kind: ClassClaim
-      name: sta-trading-agent-oauth2
+      apiVersion: v1
+      kind: Secret
+      name: marketplace-test-registration
+  #- name: sso
+  #  ref:
+  #    apiVersion: services.apps.tanzu.vmware.com/v1alpha1
+  #    kind: ClassClaim
+  #    name: sta-trading-agent-oauth2
