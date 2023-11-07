@@ -78,8 +78,6 @@ class SecurityConfig {
                     .build();
             final var authorizedClient = oauth2ClientManager
                     .authorize(authorizeRequest);
-                    logger.info("regid: {}", authorizeRequest.getClientRegistrationId());
-                    logger.info("tostring: {}", authorizeRequest.getAuthorizedClient().toString());
 
             if (authorizedClient != null) {
                 final var accessToken = authorizedClient.getAccessToken();
