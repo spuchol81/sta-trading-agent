@@ -1,9 +1,9 @@
 app:
   marketplace:
-    url: https://sta.az.run.withtanzu.com
+    url: https://sta-marketplace-default.tanzu.aks.spuchol.me
   agent:
     strategy: buy-lower-stock
-    user: insert-user
+    user: spuchol81
 
 spring:
   application:

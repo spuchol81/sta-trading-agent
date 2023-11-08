@@ -36,7 +36,7 @@ spec:
       apiVersion: v1
       kind: Secret
       name: sta-trading-agent-config
-  - name: sso
+  - name: appsso
     ref:
       apiVersion: v1
       kind: Secret
